@@ -43,9 +43,15 @@ def avg_medal_count():
     df = DataFrame(olympic_medal_counts)
 
     # YOUR CODE HERE
-    df = DataFrame(olympic_medal_counts);
-    gold_medals = df[df['gold'] >=1 ];
-    avg_bronze_at_least_one_gold = numpy.mean(gold_medals['bronze']);
+    # df = DataFrame(olympic_medal_counts);
+    # gold_medals = df[df['gold'] >=1 ];
+    # avg_bronze_at_least_one_gold = numpy.mean(gold_medals['bronze']);
+    #
+    ## OR
+    olympic_medal_counts_df = DataFrame(olympic_medal_counts);
+    bronze_atleast_one_gold = olympic_medal_counts_df['bronze'][olympic_medal_counts_df['gold'] >= 1];
+    avg_bronze_at_least_one_gold = numpy.mean(bronze_atleast_one_gold);
+
 
     print avg_bronze_at_least_one_gold
     return 0;
