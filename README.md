@@ -1,2 +1,2 @@
 # datascience
-Intro to Data Science - Audacity support files
+Intro to Data Science - Udacity
